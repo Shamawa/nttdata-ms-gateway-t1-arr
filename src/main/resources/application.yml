@@ -1,0 +1,18 @@
+server: 
+  port: 9090
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+      
+spring:
+	application:
+  namer: gateway-service
+  cloud:
+  gateway:
+  routes:
+    id: formacionMS1
+    uri: 
+    predicates:
+      Path=/whoAreYou/**
